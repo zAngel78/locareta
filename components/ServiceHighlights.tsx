@@ -27,12 +27,12 @@ export default function ServiceHighlights() {
   return (
     <section className="py-24 bg-slate-50">
       <div className="container mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-brand-accent font-bold tracking-widest uppercase text-sm">Our Expertise</span>
-          <h2 className="font-serif text-4xl font-bold text-brand-dark mt-3 mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16 px-4">
+          <span className="text-brand-accent font-bold tracking-widest uppercase text-xs md:text-sm">Our Expertise</span>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brand-dark mt-2 md:mt-3 mb-4 md:mb-6">
             Comprehensive Real Estate Services
           </h2>
-          <p className="text-slate-500 text-lg">
+          <p className="text-slate-500 text-base md:text-lg">
             Whether you're buying, selling, or investing, our team of dedicated professionals is here to guide you every step of the way.
           </p>
         </div>
@@ -43,7 +43,7 @@ export default function ServiceHighlights() {
               <div className="w-16 h-16 rounded-2xl bg-slate-50 text-brand-dark flex items-center justify-center mb-6 group-hover:bg-brand-dark group-hover:text-white transition-colors">
                 {service.icon}
               </div>
-              <h3 className="font-serif text-xl font-bold text-brand-dark mb-3">{service.title}</h3>
+              <h3 className="text-xl font-bold text-brand-dark mb-3">{service.title}</h3>
               <p className="text-slate-500 leading-relaxed">
                 {service.description}
               </p>

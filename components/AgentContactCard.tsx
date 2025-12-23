@@ -21,7 +21,7 @@ export default function AgentContactCard({ agent }: { agent: Agent }) {
           <div className="absolute bottom-0 right-0 w-4 h-4 bg-green-500 border-2 border-white rounded-full"></div>
         </div>
         <div>
-          <h3 className="font-serif text-lg font-bold text-brand-dark">{agent.name}</h3>
+          <h3 className="text-lg font-bold text-brand-dark">{agent.name}</h3>
           <p className="text-sm text-slate-500">{agent.role}</p>
         </div>
       </div>

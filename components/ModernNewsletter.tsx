@@ -9,13 +9,13 @@ export default function ModernNewsletter() {
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-accent/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
           <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-500/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2"></div>
           
-          <div className="relative z-10 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+          <div className="relative z-10 flex flex-col lg:flex-row items-center gap-8 lg:gap-20">
             <div className="flex-1">
-              <span className="text-brand-accent font-bold tracking-widest uppercase text-sm mb-4 block">Newsletter</span>
-              <h2 className="font-serif text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+              <span className="text-brand-accent font-bold tracking-widest uppercase text-xs md:text-sm mb-3 md:mb-4 block">Newsletter</span>
+              <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white mb-4 md:mb-6 leading-tight">
                 Unlock exclusive market insights.
               </h2>
-              <p className="text-slate-300 text-lg leading-relaxed max-w-xl">
+              <p className="text-slate-300 text-base md:text-lg leading-relaxed max-w-xl">
                 Join our exclusive community to receive the latest luxury listings, off-market opportunities, and real estate trends directly to your inbox.
               </p>
             </div>

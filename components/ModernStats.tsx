@@ -35,7 +35,7 @@ export default function ModernStats() {
               <div className="mb-6 p-5 rounded-2xl bg-white/5 text-brand-accent group-hover:bg-brand-accent group-hover:text-brand-dark transition-all duration-300 transform group-hover:scale-110">
                 {stat.icon}
               </div>
-              <h3 className="text-5xl font-bold mb-3 font-serif">{stat.value}</h3>
+              <h3 className="text-5xl font-bold mb-3">{stat.value}</h3>
               <p className="text-white/60 font-medium tracking-wide">{stat.label}</p>
             </motion.div>
           ))}

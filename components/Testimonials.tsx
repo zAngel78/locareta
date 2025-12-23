@@ -7,7 +7,7 @@ export default function Testimonials() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <span className="text-brand-accent font-bold tracking-widest uppercase text-sm">Testimonials</span>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-brand-dark mt-3 mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-brand-dark mt-3 mb-8">
               Trusted by the world's most discerning clients.
             </h2>
             <p className="text-slate-500 text-lg mb-8 leading-relaxed">
@@ -16,7 +16,7 @@ export default function Testimonials() {
             
             <div className="flex gap-8">
               <div>
-                <div className="text-3xl font-bold text-brand-dark font-serif">4.9/5</div>
+                <div className="text-3xl font-bold text-brand-dark">4.9/5</div>
                 <div className="flex text-brand-accent mt-1">
                   {[1,2,3,4,5].map(i => <Star key={i} size={16} fill="currentColor" />)}
                 </div>
@@ -24,7 +24,7 @@ export default function Testimonials() {
               </div>
               <div className="w-px bg-slate-200"></div>
               <div>
-                <div className="text-3xl font-bold text-brand-dark font-serif">2.5k+</div>
+                <div className="text-3xl font-bold text-brand-dark">2.5k+</div>
                 <div className="text-sm text-slate-400 mt-1">Reviews Verified</div>
               </div>
             </div>

@@ -75,7 +75,7 @@ export default function PropertyCard({
         <div className="flex justify-between items-start mb-2">
           <div>
             <p className="text-xs font-bold text-brand-accent uppercase tracking-wide mb-1">{type || 'Residencial'}</p>
-            <h3 className="font-serif text-xl font-bold text-brand-dark">{price}</h3>
+            <h3 className="text-xl font-bold text-brand-dark">{price}</h3>
           </div>
         </div>
         

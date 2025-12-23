@@ -32,7 +32,7 @@ export default function ModernHeader() {
       className={`fixed w-full z-50 transition-all duration-500 border-b ${
         isHomePage && !isScrolled 
           ? 'bg-transparent border-transparent py-6' 
-          : 'bg-white/95 backdrop-blur-md border-slate-100 shadow-sm py-4'
+          : 'bg-white border-slate-100 shadow-sm py-4'
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
@@ -41,9 +41,9 @@ export default function ModernHeader() {
           <div className={`w-10 h-10 rounded-tr-xl rounded-bl-xl flex items-center justify-center transition-colors shadow-lg ${
             isHomePage && !isScrolled ? 'bg-white text-brand-dark' : 'bg-brand-dark text-white'
           }`}>
-            <span className="font-serif font-bold text-xl">R</span>
+            <span className="font-bold text-xl">R</span>
           </div>
-          <span className={`font-serif text-2xl font-bold tracking-tight transition-colors ${
+          <span className={`text-2xl font-bold tracking-tight transition-colors ${
             isHomePage && !isScrolled ? 'text-white' : 'text-brand-dark'
           }`}>
             RealHome
@@ -51,7 +51,7 @@ export default function ModernHeader() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((item) => (
             <Link 
               key={item.name} 
@@ -67,7 +67,7 @@ export default function ModernHeader() {
         </nav>
 
         {/* Actions */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-4">
           <button className={`p-2 rounded-full transition-colors ${
             isHomePage && !isScrolled 
               ? 'hover:bg-white/10 text-white' 
@@ -88,7 +88,7 @@ export default function ModernHeader() {
 
         {/* Mobile Toggle */}
         <button 
-          className={`md:hidden p-2 ${
+          className={`lg:hidden p-2 ${
             isHomePage && !isScrolled ? 'text-white' : 'text-brand-dark'
           }`}
           onClick={() => setMobileMenuOpen(true)}
@@ -108,7 +108,7 @@ export default function ModernHeader() {
             className="fixed inset-0 bg-white z-50 flex flex-col"
           >
             <div className="p-6 flex justify-between items-center border-b">
-              <span className="font-serif text-xl font-bold text-brand-dark">Menu</span>
+              <span className="text-xl font-bold text-brand-dark">Menu</span>
               <button onClick={() => setMobileMenuOpen(false)} className="p-2 text-slate-500 hover:text-brand-dark">
                 <X size={24} />
               </button>
@@ -118,7 +118,7 @@ export default function ModernHeader() {
                 <Link 
                   key={item.name} 
                   href={item.href}
-                  className="text-2xl font-serif text-brand-dark hover:text-brand-accent transition-colors flex items-center gap-3"
+                  className="text-2xl font-bold text-brand-dark hover:text-brand-accent transition-colors flex items-center gap-3"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -126,7 +126,7 @@ export default function ModernHeader() {
               ))}
               <Link 
                 href="#"
-                className="text-2xl font-serif text-brand-dark hover:text-brand-accent transition-colors"
+                className="text-2xl font-bold text-brand-dark hover:text-brand-accent transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Agents

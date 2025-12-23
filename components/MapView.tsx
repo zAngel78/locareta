@@ -35,9 +35,11 @@ interface MapViewProps {
   properties: Property[]
   onPropertySelect?: (id: number) => void
   selectedId?: number | null
+  center?: [number, number]
+  zoom?: number
 }
 
-export default function MapView({ properties, onPropertySelect, selectedId }: MapViewProps) {
+export default function MapView({ properties, onPropertySelect, selectedId, center = [37.7749, -122.4194], zoom = 12 }: MapViewProps) {
   const [isClient, setIsClient] = useState(false)
   const [L, setL] = useState<any>(null)
 
@@ -66,7 +68,7 @@ export default function MapView({ properties, onPropertySelect, selectedId }: Ma
       className: 'custom-map-marker',
       html: `
         <div class="
-          px-3 py-1.5 rounded-lg shadow-lg border border-slate-200 font-bold text-sm transition-all transform hover:scale-110
+          px-2 py-1 rounded-lg shadow-lg border border-slate-200 font-bold text-xs transition-all transform hover:scale-110 whitespace-nowrap
           ${isSelected 
             ? 'bg-brand-dark text-white scale-110 z-50' 
             : 'bg-white text-brand-dark hover:bg-brand-dark hover:text-white'
@@ -75,25 +77,26 @@ export default function MapView({ properties, onPropertySelect, selectedId }: Ma
           ${price}
         </div>
         <div class="
-          w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] 
-          absolute left-1/2 -translate-x-1/2 -bottom-[5px]
+          w-0 h-0 border-l-[5px] border-l-transparent border-r-[5px] border-r-transparent border-t-[5px] 
+          absolute left-1/2 -translate-x-1/2 -bottom-[4px]
           ${isSelected ? 'border-t-brand-dark' : 'border-t-white'}
         "></div>
       `,
-      iconSize: [60, 30],
-      iconAnchor: [30, 35],
-      popupAnchor: [0, -35]
+      iconSize: [80, 28],
+      iconAnchor: [40, 32],
+      popupAnchor: [0, -32]
     })
   }
 
   return (
     <div className="w-full h-full relative z-0">
       <MapContainer
-        center={[37.7749, -122.4194]}
-        zoom={13}
+        center={center}
+        zoom={zoom}
         style={{ height: '100%', width: '100%' }}
         scrollWheelZoom={true}
         zoomControl={false}
+        key={`${center[0]}-${center[1]}`}
       >
         {/* Clean, Professional CartoDB Positron Tiles */}
         <TileLayer
@@ -123,7 +126,7 @@ export default function MapView({ properties, onPropertySelect, selectedId }: Ma
                   </div>
                 </div>
                 <div className="p-3 bg-white">
-                  <div className="text-lg font-bold text-brand-dark font-serif mb-1">{property.price}</div>
+                  <div className="text-lg font-bold text-brand-dark mb-1">{property.price}</div>
                   <div className="flex items-center gap-2 text-xs text-slate-500 mb-2 font-medium">
                     <span>{property.beds} bds</span>
                     <span>•</span>

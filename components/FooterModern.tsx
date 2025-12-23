@@ -10,9 +10,9 @@ export default function FooterModern() {
           <div className="lg:col-span-4">
             <Link href="/" className="flex items-center gap-2 mb-8">
               <div className="w-10 h-10 rounded-tr-xl rounded-bl-xl bg-brand-dark text-white flex items-center justify-center">
-                <span className="font-serif font-bold text-xl">R</span>
+                <span className="font-bold text-xl">R</span>
               </div>
-              <span className="font-serif text-2xl font-bold text-brand-dark">RealHome</span>
+              <span className="text-2xl font-bold text-brand-dark">RealHome</span>
             </Link>
             <p className="text-slate-500 mb-8 leading-relaxed max-w-sm">
               Elevating the real estate experience with modern technology and timeless service. We connect extraordinary people with extraordinary properties.

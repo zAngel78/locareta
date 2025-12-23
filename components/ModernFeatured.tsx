@@ -10,19 +10,19 @@ export default function ModernFeatured() {
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-12 gap-4">
           <div>
-            <span className="text-brand-accent font-bold tracking-widest uppercase text-sm">Exclusive Listings</span>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-brand-dark mt-3 mb-4">
+            <span className="text-brand-accent font-bold tracking-widest uppercase text-xs md:text-sm">Exclusive Listings</span>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brand-dark mt-2 md:mt-3 mb-3 md:mb-4">
               Featured Properties
             </h2>
-            <p className="text-slate-600 max-w-xl">
+            <p className="text-slate-600 text-sm md:text-base max-w-xl">
               Handpicked properties that represent the finest in luxury living, architecture, and design.
             </p>
           </div>
-          <Link href="/search" className="group flex items-center gap-2 text-brand-dark font-bold hover:text-brand-accent transition-colors border-b-2 border-transparent hover:border-brand-accent pb-1">
+          <Link href="/search" className="group flex items-center gap-2 text-brand-dark text-sm md:text-base font-bold hover:text-brand-accent transition-colors border-b-2 border-transparent hover:border-brand-accent pb-1 whitespace-nowrap">
             View All Properties
-            <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
 
@@ -55,14 +55,14 @@ export default function ModernFeatured() {
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-4">
                     <div>
-                      <h3 className="font-serif text-xl font-bold text-brand-dark mb-1 group-hover:text-brand-accent transition-colors line-clamp-1">
+                      <h3 className="text-xl font-bold text-brand-dark mb-1 group-hover:text-brand-accent transition-colors line-clamp-1">
                         {property.title}
                       </h3>
                       <p className="text-slate-500 text-sm">{property.address}, {property.city}</p>
                     </div>
                   </div>
                   
-                  <p className="text-2xl font-serif font-bold text-brand-dark mb-6">{property.price}</p>
+                  <p className="text-2xl font-bold text-brand-dark mb-6">{property.price}</p>
 
                   <div className="grid grid-cols-3 gap-4 pt-4 border-t border-slate-100">
                     <div className="flex items-center gap-2 text-slate-600">
