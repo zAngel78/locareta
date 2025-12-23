@@ -54,7 +54,7 @@ export default function TestimonialsAwwwards() {
     const isMobile = window.innerWidth < 768;
     if (isMobile) return;
 
-    const cards = gsap.utils.toArray('.testimonial-card');
+    const cards = gsap.utils.toArray<HTMLElement>('.testimonial-card');
     const cardCount = cards.length;
     const scrollDistance = cardCount * 80; // Ajustado para mejor scroll
 
